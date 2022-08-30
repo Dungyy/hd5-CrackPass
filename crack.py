@@ -3,13 +3,26 @@
 
 import hashlib 
 
-flag = 0
+#flag = 0
 counter = 0
 
+print(r'''
+ _   _ ____  ____     ____                _         
+| | | |  _ \| ___|   / ___|_ __ __ _  ___| | __ ____
+| |_| | | | |___ \  | |   | '__/ _` |/ __| |/ /|_  /
+|  _  | |_| |___) | | |___| | | (_| | (__|   <  / / 
+|_| |_|____/|____/   \____|_|  \__,_|\___|_|\_\/___|            
+''')
+print("***********************************************")
+print("* Twitter : https://twitter.com/CodeWithDungy *")
+print("* GitHub : https://github.com/Dungyy          *")
+print("***********************************************")
+print("\n")
 pass_hash = input("Enter md5 Hash: ")
-
 wordList = input("File Name: ")
-
+print("\n")
+print(25 * "==")
+print("\n")
 try: 
     pass_file = open(wordList, 'r')
 except:
@@ -28,11 +41,11 @@ for word in pass_file:
     counter += 1
 
     if digest == pass_hash:
-        print("Password has been found")
-        print(10 * "-")
-
-        print("Password is: " + word)
+        print("Password has been found!")
+        print("\n")
+        print("Password is ==> " + word)
+        print(25 * "==")
         break 
 
-if flag == 0: 
-    print("Password is not in the list")   
+#if flag == 0: 
+#   print("Password is not in the list")   
