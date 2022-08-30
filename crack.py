@@ -28,8 +28,10 @@ for word in pass_file:
     counter += 1
 
     if digest == pass_hash:
-        print("Password has been found ")
-        print("Password is " + word)
+        print("Password has been found")
+        print(10 * "-")
+
+        print("Password is: " + word)
         break 
 
 if flag == 0: 
